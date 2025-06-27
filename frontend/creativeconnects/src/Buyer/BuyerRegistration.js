@@ -229,11 +229,11 @@ const BuyerRegistration = () => {
     }
 ////////////////////////////////////
     e.preventDefault();
-  
+
     if (!validateForm()) {
       return;
     }
-  
+
 >>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     try {
       const response = await fetch("http://localhost:5000/api/buyer/register", {
@@ -248,9 +248,9 @@ const BuyerRegistration = () => {
       const data = await response.json();
 
 =======
-  
+
       const data = await response.json();
-  
+
 >>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       if (response.ok) {
         Swal.fire({
@@ -302,22 +302,6 @@ const BuyerRegistration = () => {
   return (
     <div className="Buyer-container">
       <div className="Buyer-col1">
-<<<<<<< HEAD
-        <h1 className='BuyerWelHeading'>Welcome to Creative Connects</h1>
-        <p className='BuyerWelPara'>Join a community where you can connect, collaborate, and share your creative skills and interests.</p>
-        <button className="Buyerback" onClick={handleBack}>
-
-          Back
-        </button>
-        <img src={logo} alt="Logo" style={{ width: "300px", margin: "20px" }} />
-      </div>
-      <div className="Buyer-col2">
-        <h1 className='Buyer-col2-head'>BUYER REGISTRATION</h1>
-        <form className='Buyer-col2-form' onSubmit={handleSubmit}>
-          <div className="Buyer-input-row">
-            <div className="Buyer-input-half">
-              <label className="Buyer-label" htmlFor="f-name">First Name</label>
-=======
         <h1>Welcome to Creative Connects</h1>
         <p>Join a community where you can connect, collaborate, and share your creative skills and interests.</p>
         <button className="Buyerback" onClick={handleBack}>
@@ -325,12 +309,11 @@ const BuyerRegistration = () => {
         </button>
       </div>
       <div className="Buyer-col2">
-        <h1>Buyer Registration</h1>
+        <h1>BUYER REGISTRATION</h1>
         <form onSubmit={handleSubmit}>
           <div className="Buyer-input-row">
             <div className="Buyer-input-half">
               <label htmlFor="f-name">First Name</label>
->>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               <input
                 type="text"
                 id="f-name"
