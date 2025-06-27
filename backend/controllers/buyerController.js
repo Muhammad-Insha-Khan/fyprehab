@@ -23,7 +23,7 @@ const registerBuyer = async (req, res) => {
       token,
     });
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: 'Serversss ssserror' });
   }
 };
 
@@ -166,7 +166,7 @@ const getJobDescriptions = async (req, res) => {
   }
 };
 <<<<<<< HEAD
-module.exports = { registerBuyer, signinBuyer, submitProjectProposal , addJobDescription , getProjectProposals , getJobDescriptions};
+module.exports = { registerBuyer, signinBuyer, submitProjectProposal, addJobDescription, getProjectProposals, getJobDescriptions };
 =======
 
 //delete
