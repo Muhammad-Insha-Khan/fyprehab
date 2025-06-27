@@ -1,0 +1,71 @@
+/* Base Styling */
+/* body{
+    margin: 50px;
+      align-items: center; 
+      height: 100vh;        
+      text-align: center;
+  
+  }   */
+.registration-flow {
+  justify-content: left;
+}
+
+.select-options-container,
+.registration-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  /* Hidden by default */
+  transform: translateY(20px);
+  /* Start slightly off-screen */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 0;
+  /* Ensure stacking is correct */
+}
+
+/* Make the visible container appear */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+  /* Bring to front */
+}
+
+/* Keep the hidden container invisible */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  z-index: 0;
+  /* Send to back */
+}
+
+
+.gradient-text {
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+  /* full loop */
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 6s linear infinite;
+  margin-left: 50px;
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}

@@ -1,0 +1,20 @@
+/* ClickableText.css */
+.Clickabletext {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    cursor: pointer;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .Clickabletext .icon {
+    font-size: 1.2rem;
+    vertical-align: middle; 
+    display: inline-block; 
+  }
+  
+  .Clickabletext:hover {
+    color: #00796b;
+  }
+  

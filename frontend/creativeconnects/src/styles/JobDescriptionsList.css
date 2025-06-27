@@ -1,0 +1,54 @@
+.job-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .job-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .job-item h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .job-item p {
+    margin: 6px 0;
+    color: #555;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+  }
+  
+  .search-bar button {
+    padding: 8px 16px;
+    background-color: #FF9635;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .search-bar button:hover {
+    background-color: #e07c1f;
+  }
+  

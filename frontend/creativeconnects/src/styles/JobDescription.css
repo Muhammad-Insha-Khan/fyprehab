@@ -1,0 +1,62 @@
+.JobDescription {
+    margin: 0px;        /* Optional: Ensures it takes full viewport height */
+}
+.jobinfo{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;           /* Adjust as needed */
+    max-width: 55%;
+}
+.dropdown {
+    margin-top: 10px !important;
+    width: 200px !important;              /* Set the width of the dropdown */
+    padding: 10px !important;             /* Add some padding for better appearance */
+    border: 2px solid #ccc !important;    /* Customize the border */
+    border-radius: 5px !important;        /* Make the edges rounded */
+    background-color: #f9f9f9 !important; /* Set the background color */
+    color: #333 !important;               /* Set the text color */
+    font-size: 16px !important;           /* Adjust font size */
+    cursor: pointer !important;           /* Change cursor to pointer */
+}
+
+/* Style the options when they are hovered */
+/* Style the options (hover state and general appearance) */
+/* Default option styling */
+.dropdown option {
+    background-color: #f9f9f9; /* Default background */
+    color: #555;              /* Default text color */
+}
+
+/* Hover option styling */
+.dropdown option:hover {
+    background-color: #d0f0d0; /* Light green for hover */
+    color: #555;               /* Black text on hover */
+}
+
+.dropdown option:focus {
+    background-color: #d0f0d0 !important; /* Light green for hover */
+    color: #00796b !important;
+}
+.button {
+    float: left;
+}
+
+
+.projectinput {
+    width: 780px; /* Ensure input width adjusts with container */
+    max-width: 1000px; /* Limit max width */
+    height: 120px;
+    margin: 10px auto; /* Center spacing */
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 5px rgba(25, 149, 173, 0.5);
+}
+.projectinput:focus{
+    border-color: #00796b;
+
+}

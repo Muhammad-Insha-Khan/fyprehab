@@ -1,0 +1,51 @@
+/* Dropdown.css */
+.Maindropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+ 
+  }
+  
+ 
+  
+  .Maindropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the clickable text */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 10px;
+    cursor: pointer;
+ 
+  }
+  
+  .Maindropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #333;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    cursor: pointer;
+ 
+  }
+  
+  .Maindropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #00796b;
+    cursor: pointer;
+ 
+  }
+
+  .icon {
+    padding-right: 5px; /* Adjusts spacing to the text */
+    border: none; /* Removes border */
+    background: none; /* Removes any background */
+    outline: none; /* Removes outline */
+    display: inline-flex; /* Ensures proper alignment */
+    color: inherit; /* Inherits text color */
+    cursor: pointer;
+ 
+  }
+  
