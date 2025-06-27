@@ -10,8 +10,16 @@ import '../styles/BuyerDashboard.css'; // Add a CSS file for styling
 import MyProposals from '../components/MyProposals';
 import ProjectProposalsList from '../components/ProjectProposalsList';
 import JobDescriptionsList from '../components/JobDescriptionsList';
+<<<<<<< HEAD
 
 const BuyerMainDashboard = () => {
+=======
+import ProjectProposalsStats from '../components/ProjectProposalsStats';
+import JobDescriptionsStats from '../components/JobDescriptionsStats';
+
+const BuyerMainDashboard = () => {
+  
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     return (
         <div className="dashboard-container">
           <div className="header-section">
@@ -25,8 +33,13 @@ const BuyerMainDashboard = () => {
               <Proposal />
             </div>
             <div className="stats-column">
+<<<<<<< HEAD
               <Stats heading="Project Completed" number={2} />
               <Stats heading="Pending Proposals" number={3} />
+=======
+              <ProjectProposalsStats/>
+              <JobDescriptionsStats/>
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               <Stats heading="New Messages" number={5} />
             </div>
           </div>
@@ -44,7 +57,11 @@ const BuyerMainDashboard = () => {
           <ProjectProposalsList></ProjectProposalsList>
         </div>
 
+<<<<<<< HEAD
             <div>
+=======
+            <div className='JobDiscriptionList'>
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
           {/* Other dashboard content here */}
           <JobDescriptionsList/>

@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import '../styles/SwapperRegistration.css';
+<<<<<<< HEAD
+=======
+import 'react-phone-input-2/lib/style.css'; // Import styles for react-phone-input-2
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 import PhoneInput from 'react-phone-input-2';
 import Swal from 'sweetalert2'; // Import SweetAlert2
 import SkillSwapperContractABI from "../contracts/SkillSwapperContract.json"
 import getWeb3 from "../utils/web3";
+<<<<<<< HEAD
 import logo from "./logo.png";
+=======
+
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 function SwapperRegistration() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -90,6 +98,7 @@ function SwapperRegistration() {
     }
   };
 
+<<<<<<< HEAD
   const handleSubmit = async (e) => {
 
     e.preventDefault();
@@ -125,6 +134,43 @@ function SwapperRegistration() {
       console.log("Registering new skill swapper");
       await contract.methods
         .registerSkillSwapper(
+=======
+const handleSubmit = async (e) => {
+
+e.preventDefault();
+try {
+  const web3 = await getWeb3();
+  const accounts = await web3.eth.getAccounts();
+  const networkId = await web3.eth.net.getId();
+  const deployedNetwork = SkillSwapperContractABI.networks[networkId];
+
+  if (!deployedNetwork) {
+      alert("Error: Smart contract not deployed on this network.");
+      return;
+  }
+
+  const contract = new web3.eth.Contract(
+      SkillSwapperContractABI.abi,
+      deployedNetwork.address
+  );
+
+  console.log("Checking if email exists:", formData.email);
+  const emailExists = await contract.methods.isEmailRegistered(formData.email).call();
+  console.log("Email exists:", emailExists);
+
+  if (emailExists) {
+      Swal.fire({
+          title: "Error",
+          text: "This email is already registered. Please use a different email.",
+          icon: "error",
+      });
+      return;
+  }
+
+  console.log("Registering new skill swapper");
+  await contract.methods
+      .registerSkillSwapper(
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           formData.firstName,
           formData.lastName,
           formData.email,
@@ -133,6 +179,7 @@ function SwapperRegistration() {
           formData.confirmPassword,
           formData.expertiseHave,
           formData.expertiseLookingFor
+<<<<<<< HEAD
         )
         .send({ from: accounts[0], gas: 500000 });
 
@@ -149,6 +196,24 @@ function SwapperRegistration() {
         icon: "error",
       });
     }
+=======
+      )
+      .send({ from: accounts[0], gas: 500000 });
+
+  Swal.fire({
+      title: "Registration Successful",
+      text: "You have been registered on the blockchain!",
+      icon: "success",
+  });
+} catch (error) {
+  console.error("Contract execution error: ", error);
+  Swal.fire({
+      title: "Registration Failed",
+      text: error.message,
+      icon: "error",
+  });
+}
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
 
 
@@ -212,6 +277,7 @@ function SwapperRegistration() {
     });
   };
 
+<<<<<<< HEAD
   const handleBack = () => {
     // This could redirect to the previous page or reset the form without reload
     window.location.reload(); // Go back to the previous page without a page reload
@@ -232,6 +298,20 @@ function SwapperRegistration() {
           <div className="Swapper-input-row">
             <div className="Swapper-input-half">
               <label className='Swapper-col2-label' htmlFor="f-name">First Name</label>
+=======
+  return (
+    <div className="Swapper-container">
+      <div className="Swapper-col1">
+        <h1>Welcome to Creative Connects</h1>
+        <p>Connect with others by swapping your skills and finding the expertise you're looking for.</p>
+      </div>
+      <div className="Swapper-col2">
+        <h1>SkillSwapper Registration</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="Swapper-input-row">
+            <div className="Swapper-input-half">
+              <label htmlFor="f-name">First Name</label>
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               <input
                 type="text"
                 id="f-name"
@@ -278,11 +358,14 @@ function SwapperRegistration() {
                   autoFocus: true,
                 }}
                 enableSearch
+<<<<<<< HEAD
                 containerStyle={{ width: '200px' }}         // Full wrapper
                 inputStyle={{
                   width: '240px',
                   padding: '10px 10px 10px 50px'
                 }}
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               />
             </div>
           </div>
@@ -318,7 +401,11 @@ function SwapperRegistration() {
             name="expertiseToAddHave"
             value={formData.expertiseToAddHave || ''}
             onChange={(e) => setFormData({ ...formData, expertiseToAddHave: e.target.value })}
+<<<<<<< HEAD
 
+=======
+            required
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           >
             <option value="">Select expertise</option>
             {expertiseOptions.map((expertise, index) => (
@@ -336,7 +423,11 @@ function SwapperRegistration() {
             name="expertiseToAddLookingFor"
             value={formData.expertiseToAddLookingFor || ''}
             onChange={(e) => setFormData({ ...formData, expertiseToAddLookingFor: e.target.value })}
+<<<<<<< HEAD
 
+=======
+            required
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           >
             <option value="">Select expertise</option>
             {expertiseOptions.map((expertise, index) => (

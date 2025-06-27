@@ -1,5 +1,6 @@
 /* Header.css */
 .header {
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,3 +34,45 @@
   gap: 20px;
 
 }
+=======
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    /*  width: 100%; */
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+   height: 10vh;
+   background-position:center ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 75px;
+   background-image: url(creativeconnects.png);
+  }
+  
+  .search-bar input {
+    width: 700px;
+    margin: 0px 30px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  
+
+  
+
+
+ 
+  
+  
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59

@@ -165,4 +165,36 @@ const getJobDescriptions = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+<<<<<<< HEAD
 module.exports = { registerBuyer, signinBuyer, submitProjectProposal , addJobDescription , getProjectProposals , getJobDescriptions};
+=======
+
+//delete
+
+const deleteBuyerAccount = async (req, res) => {
+  try {
+    const { password } = req.body;
+
+    if (!req.user || !req.user.id) {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    const buyer = await Buyer.findById(req.user.id);
+    if (!buyer) {
+      return res.status(404).json({ message: 'Buyer not found' });
+    }
+
+    const isMatch = await bcrypt.compare(password, buyer.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Incorrect password' });
+    }
+
+    await Buyer.findByIdAndDelete(req.user.id);
+    res.status(200).json({ message: 'Account deleted successfully' });
+  } catch (error) {
+    console.error('Delete Error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+module.exports = { registerBuyer, signinBuyer, submitProjectProposal , addJobDescription , getProjectProposals , getJobDescriptions , deleteBuyerAccount};
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59

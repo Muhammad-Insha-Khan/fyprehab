@@ -13,6 +13,7 @@ const Proposal = () => {
 
   return (
     <div className='Proposal'>
+<<<<<<< HEAD
       <div class="container">
         <div class="column">
           <h2 onClick={toggleProposal}>
@@ -29,6 +30,24 @@ const Proposal = () => {
       </div>
 
 
+=======
+        <div class="container">
+        <div class="column">
+            <h2 onClick={toggleProposal} class="ProjectProposalHeading">
+                    ProjectProposal 
+                </h2>
+        </div>
+        <div class="divider"></div>
+        <div class="column">
+            
+            <h2 onClick={toggleJob} class="JobProposalHeading">
+                    JobProposal
+                </h2>
+        </div>
+        </div>
+           
+  
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       <div className='Divider'></div>
       {proposal === "ProjectProposal" && <ProjectProposal />}
       {proposal === "JobDescription" && <JobDescription />}

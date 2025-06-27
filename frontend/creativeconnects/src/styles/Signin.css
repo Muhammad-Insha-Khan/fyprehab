@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     overflow-x: hidden;
 }
 
@@ -7,6 +11,7 @@ body {
     display: flex;
     border: 1px solid #e1e1e1;
     border-radius: 15px;
+<<<<<<< HEAD
     margin: 70px auto;
     /* Center horizontally */
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
@@ -35,20 +40,48 @@ body {
     /* Vertically center the content */
     align-items: center;
     /* Horizontally center the content */
+=======
+    margin: 70px auto; /* Center horizontally */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1250px; /* Increased max-width slightly */
+    width: 100%; /* Increased the container width to 90% */
+}
+
+.col1 {
+    background-color: #00796b; /* Dark cyan */
+    padding: 30px;
+    width: 42%; /* Slightly increased width */
+    padding-top: 50px; /* Adjusted padding */
+    padding-bottom: 50px; /* Adjusted padding */
+    color: white;
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    flex-direction: column; /* Ensure content aligns vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 .col1 h1 {
     margin-bottom: 28px;
+<<<<<<< HEAD
     font-size: 38px;
     /* Slightly increased font size */
+=======
+    font-size: 38px; /* Slightly increased font size */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     animation: fadeIn 2s ease-out;
 }
 
 .col1 p {
+<<<<<<< HEAD
     font-size: 18px;
     /* Slightly increased font size */
+=======
+    font-size: 18px; /* Slightly increased font size */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin-bottom: 27px;
     margin-left: 28px;
     margin-right: 28px;
@@ -59,6 +92,7 @@ body {
 
 .col2 {
     padding: 30px;
+<<<<<<< HEAD
     width: 58%;
     /* Slightly increased width */
     padding-top: 50px;
@@ -81,13 +115,33 @@ body {
     margin-bottom: 32px;
     font-size: 38px;
     /* Slightly increased font size */
+=======
+    width: 58%; /* Slightly increased width */
+    padding-top: 50px; /* Adjusted padding */
+    padding-bottom: 50px; /* Adjusted padding */
+    color: #333333;
+    display: flex;
+    flex-direction: column; /* Ensure content aligns vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+.col2 h1 {
+    color: #004d40; /* Darker teal */
+    margin-bottom: 32px;
+    font-size: 38px; /* Slightly increased font size */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation: fadeIn 2s ease-out;
 }
 
 .col2 p {
+<<<<<<< HEAD
     font-size: 15px;
     /* Slightly increased font size */
+=======
+    font-size: 15px; /* Slightly increased font size */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin-bottom: -30px;
     margin-left: 80px;
     margin-right: 80px;
@@ -104,11 +158,17 @@ body {
 /* Floating Circle Animation */
 .floating-circle {
     position: absolute;
+<<<<<<< HEAD
     width: 190px;
     /* Slightly increased size */
     height: 190px;
     background-color: #004d40;
     /* Dark cyan circle */
+=======
+    width: 190px; /* Slightly increased size */
+    height: 190px;
+    background-color: #004d40; /* Dark cyan circle */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     border-radius: 50%;
     animation: circle-animation 14s ease-in-out infinite;
     z-index: -1;
@@ -120,12 +180,18 @@ body {
         left: 100%;
         transform: translateX(-50%);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     50% {
         bottom: 100%;
         left: 70%;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     100% {
         bottom: 110%;
     }
@@ -137,9 +203,16 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     100% {
         opacity: 1;
         transform: translateY(0);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59

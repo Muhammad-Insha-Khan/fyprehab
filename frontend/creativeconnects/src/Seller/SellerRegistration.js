@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import 'react-phone-input-2/lib/style.css'; // Import styles for react-phone-input-2
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 import PhoneInput from 'react-phone-input-2';
 import Swal from 'sweetalert2';
 import '../styles/SellerRegistration.css';
 import SellerContractABI from "../contracts/SellerContract.json"
 import getWeb3 from "../utils/web3";
+<<<<<<< HEAD
 import logo from "./logo.png";
 
 const SellerRegistration = () => {
 
 
+=======
+
+
+const SellerRegistration = () => {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -40,7 +50,11 @@ const SellerRegistration = () => {
 
   const handleAddSkill = () => {
     const selectedSkill = formData.skillToAdd;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     if (!selectedSkill) {
       Swal.fire({
         title: 'Invalid Selection',
@@ -58,7 +72,11 @@ const SellerRegistration = () => {
         skills: [...formData.skills, selectedSkill],
         skillToAdd: '',
       });
+<<<<<<< HEAD
     } else if (formData.skills.length >= 3) {
+=======
+    }else if (formData.skills.length >= 3) {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       Swal.fire({
         title: 'Limit Reached',
         text: 'You can only select up to 3 interests.',
@@ -101,17 +119,26 @@ const SellerRegistration = () => {
 
     return true;
   };
+<<<<<<< HEAD
   const handleSubmit = async (e) => {
 
     ///
     e.preventDefault();
     try {
+=======
+const handleSubmit = async (e) => {
+  
+  ///
+  e.preventDefault();
+  try {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       const web3 = await getWeb3();
       const accounts = await web3.eth.getAccounts();
       const networkId = await web3.eth.net.getId();
       const deployedNetwork = SellerContractABI.networks[networkId];
 
       if (!deployedNetwork) {
+<<<<<<< HEAD
         alert("Error: Smart contract not deployed on this network.");
         return;
       }
@@ -119,21 +146,40 @@ const SellerRegistration = () => {
       const contract = new web3.eth.Contract(
         SellerContractABI.abi,
         deployedNetwork.address
+=======
+          alert("Error: Smart contract not deployed on this network.");
+          return;
+      }
+
+      const contract = new web3.eth.Contract(
+          SellerContractABI.abi,
+          deployedNetwork.address
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       );
 
       // Check if email already exists in the blockchain
       const emailExists = await contract.methods.isEmailRegistered(formData.email).call();
       if (emailExists) {
+<<<<<<< HEAD
         Swal.fire({
           title: "Error",
           text: "This email is already registered. Please use a different email.",
           icon: "error",
         });
         return;
+=======
+          Swal.fire({
+              title: "Error",
+              text: "This email is already registered. Please use a different email.",
+              icon: "error",
+          });
+          return;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       }
 
       // Register the seller if email is not found
       await contract.methods
+<<<<<<< HEAD
         .registerSeller(
           formData.firstName,
           formData.lastName,
@@ -220,6 +266,94 @@ const SellerRegistration = () => {
       console.error('Error:', error);
     }
   };
+=======
+          .registerSeller(
+              formData.firstName,
+              formData.lastName,
+              formData.email,
+              formData.phone,
+              formData.fieldDomain,
+              skills
+          )
+          .send({ from: accounts[0], gas: 600000 });
+
+      Swal.fire({
+          title: "Registration Successful",
+          text: "You have been registered on the blockchain!",
+          icon: "success",
+      });
+  } catch (error) {
+      Swal.fire({
+          title: "Registration Failed",
+          text: error.message,
+          icon: "error",
+      });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /////////////////////////
+  if (!validateForm()) {
+    return;
+  }
+
+  try {
+    const response = await fetch('http://localhost:5000/api/seller/register', {
+      method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      Swal.fire({
+        title: 'Success',
+        text: 'Registration successful. Check your email for confirmation.',
+        icon: 'success',
+        background: '#00796b',
+        color: 'white',
+      });
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        password: '',
+        confirmPassword: '',
+        fieldDomain: '',
+        skills: [],
+        skillToAdd: '',
+      });
+    } else {
+      Swal.fire({
+        title: 'Error',
+        text: data.message,
+        icon: 'error',
+        background: '#00796b',
+        color: 'white',
+      });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
 
   const handleClear = () => {
@@ -252,6 +386,7 @@ const SellerRegistration = () => {
   return (
     <div className="Seller-container">
       <div className="Seller-col1">
+<<<<<<< HEAD
         <h1 className='SellerWelHeading'>Welcome to Creative Connects</h1>
         <p className="SellerWelPara">Join a vibrant community where your expertise meets new opportunities. Share and grow your skills.</p>
         <button className="Sellerback" onClick={handleBack}>Back</button>
@@ -264,6 +399,18 @@ const SellerRegistration = () => {
           <div className="Seller-input-row">
             <div className="Seller-input-half">
               <label className='seller-label' htmlFor="f-name">First Name</label>
+=======
+        <h1>Welcome to Creative Connects</h1>
+        <p>Join a vibrant community where your expertise meets new opportunities. Share and grow your skills.</p>
+        <button className="Sellerback" onClick={handleBack}>Back</button>
+      </div>
+      <div className="Seller-col2">
+        <h1>Seller Registration</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="Seller-input-row">
+            <div className="Seller-input-half">
+              <label htmlFor="f-name">First Name</label>
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               <input
                 type="text"
                 id="f-name"
@@ -300,7 +447,11 @@ const SellerRegistration = () => {
             </div>
             <div className="Seller-input-half">
               <label htmlFor="phone">Phone Number</label>
+<<<<<<< HEAD
               <PhoneInput className="Phoneinput"
+=======
+              <PhoneInput
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
                 country="pk"
                 value={formData.phone}
                 onChange={(phone) => setFormData({ ...formData, phone })}
@@ -310,11 +461,14 @@ const SellerRegistration = () => {
                   autoFocus: true,
                 }}
                 enableSearch
+<<<<<<< HEAD
                 containerStyle={{ width: '200px' }}         // Full wrapper
                 inputStyle={{
                   width: '240px',
                   padding: '10px 10px 10px 50px'
                 }}
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               />
             </div>
           </div>
@@ -366,7 +520,11 @@ const SellerRegistration = () => {
             name="skills"
             value={formData.skillToAdd || ''}
             onChange={(e) => setFormData({ ...formData, skillToAdd: e.target.value })}
+<<<<<<< HEAD
 
+=======
+            required
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           >
             <option value="">Select a skill</option>
             {skills.map((skill, index) => (
@@ -386,7 +544,11 @@ const SellerRegistration = () => {
           </div>
         </form>
       </div>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       <div className="floating-circle"></div>
     </div>
   );

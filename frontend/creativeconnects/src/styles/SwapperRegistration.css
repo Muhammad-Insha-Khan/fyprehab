@@ -1,11 +1,17 @@
 /* Overall body styling */
 .Swapper-body {
+<<<<<<< HEAD
   overflow-x: hidden;
   /* Prevent horizontal scrolling */
   font-family: Arial, sans-serif;
   /* Set a global font */
   background-color: #f5f5f5;
   /* Light background color */
+=======
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif; /* Set a global font */
+  background-color: #f5f5f5; /* Light background color */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   margin: 0;
   padding: 0;
 }
@@ -19,17 +25,29 @@
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
   max-width: 1250px;
   width: 100%;
+<<<<<<< HEAD
   position: relative;
   /* To position the floating circle within */
+=======
+  position: relative; /* To position the floating circle within */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Left column - Swapper info area */
 .Swapper-col1 {
+<<<<<<< HEAD
   background-color: #00796b;
   /* Dark cyan color */
   padding: 30px;
   width: 42%;
 
+=======
+  background-color: #00796b; /* Dark cyan color */
+  padding: 30px;
+  width: 42%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   color: white;
   border-radius: 15px 0 0 15px;
   display: flex;
@@ -38,11 +56,16 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
 .Swapper-col1-h1 {
+=======
+.Swapper-col1 h1 {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   margin-bottom: 28px;
   font-size: 38px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
+<<<<<<< HEAD
   animation: fadeIn 2s ease-out;
   justify-content: center;
   align-items: center;
@@ -53,16 +76,26 @@
 }
 
 .Swapper-col1-p {
+=======
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+.Swapper-col1 p {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   font-size: 18px;
   margin-bottom: 27px;
   margin-left: 28px;
   margin-right: 28px;
   font-family: sans-serif;
   color: #e0e0e0;
+<<<<<<< HEAD
   text-align: center;
   padding: 0px 30px 0px 30px;
   animation: fadeIn 2s ease-out;
   /* Fade-in animation */
+=======
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Right column - Form area */
@@ -78,6 +111,7 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
 .Swapper-col2-h1 {
   color: #004d40;
   /* Darker teal */
@@ -89,18 +123,37 @@
 }
 
 .Swapper-col2-form {
+=======
+.Swapper-col2 h1 {
+  color: #004d40; /* Darker teal */
+  margin-bottom: 32px;
+  font-size: 38px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+.Swapper-col2 form {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+<<<<<<< HEAD
 .Swapper-col2-label {
+=======
+.Swapper-col2 label {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   margin-top: 10px;
   font-size: 16px;
 }
 
+<<<<<<< HEAD
 .Swapper-col2 input,
 .Swapper-col2 select {
+=======
+.Swapper-col2 input, .Swapper-col2 select {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   margin-top: 5px;
   padding: 10px;
   width: 80%;
@@ -153,11 +206,15 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+<<<<<<< HEAD
   margin-right: 10px;
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Clear button styles */
 .Swapper-clear {
+<<<<<<< HEAD
   background-color: #FF9635;
   color: white;
   padding: 10px 20px;
@@ -165,10 +222,23 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+=======
+  background-color: white;
+  color: #FF9635;
+  padding: 10px 20px;
+  border: 1px solid #FF9635;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 .Swapper-clear .clear-icon {
   margin-right: 5px;
+<<<<<<< HEAD
   font-size: 18px;
   /* Larger cross icon */
 }
@@ -176,14 +246,25 @@
 /* Button hover effects */
 .Swapper-submit:hover,
 .Swapper-clear:hover {
+=======
+  font-size: 18px; /* Larger cross icon */
+}
+
+/* Button hover effects */
+.Swapper-submit:hover, .Swapper-clear:hover {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   opacity: 0.9;
 }
 
 /* Floating circle */
 .floating-circle {
   position: absolute;
+<<<<<<< HEAD
   background-color: #4caf50;
   /* Green circle */
+=======
+  background-color: #4caf50; /* Green circle */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -196,6 +277,7 @@
 /* Animation for floating circle */
 @keyframes float {
   0% {
+<<<<<<< HEAD
     transform: translateY(0);
   }
 
@@ -205,12 +287,22 @@
 
   100% {
     transform: translateY(0);
+=======
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
   }
 }
 
 /* Fade-in animation */
 @keyframes fadeIn {
   0% {
+<<<<<<< HEAD
     opacity: 0;
   }
 
@@ -229,3 +321,11 @@
 .Phoneinput .flag-dropdown {
   height: 32px;
 }
+=======
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59

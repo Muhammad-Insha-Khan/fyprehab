@@ -33,7 +33,11 @@ const MyProposals = () => {
   return (
     <div className="my-proposals">
       <h2>My Submitted Project Proposals</h2>
+<<<<<<< HEAD
       {proposals.length === 0 ? (
+=======
+      {proposals.length !== 0 ? (
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
         <p>No proposals submitted yet.</p>
       ) : (
         <ul>

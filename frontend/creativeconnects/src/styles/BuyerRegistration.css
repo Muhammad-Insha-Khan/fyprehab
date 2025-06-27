@@ -1,9 +1,14 @@
 /* Overall body styling */
 .Buyer-body {
+<<<<<<< HEAD
     font-family: Arial, sans-serif;
     /* Set a global font */
     background-color: #f5f5f5;
     /* Light background color */
+=======
+        font-family: Arial, sans-serif; /* Set a global font */
+    background-color: #f5f5f5; /* Light background color */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin: 0;
     padding: 0;
 }
@@ -17,16 +22,28 @@
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
     max-width: 1250px;
     width: 100%;
+<<<<<<< HEAD
     position: relative;
     /* To position the floating circle within */
+=======
+    position: relative; /* To position the floating circle within */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Left column - Buyer info area */
 .Buyer-col1 {
+<<<<<<< HEAD
     background-color: #00796b;
     /* Dark cyan color */
     width: 50%;
 
+=======
+    background-color: #00796b; /* Dark cyan color */
+    padding: 30px;
+    width: 42%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     color: white;
     border-radius: 15px 0 0 15px;
     display: flex;
@@ -35,11 +52,16 @@
     align-items: center;
 }
 
+<<<<<<< HEAD
 .BuyerWelHeading {
+=======
+.Buyer-col1 h1 {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin-bottom: 28px;
     font-size: 38px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
+<<<<<<< HEAD
     animation: fadeIn 2s ease-out;
     justify-content: center;
     align-items: center;
@@ -50,16 +72,26 @@
 }
 
 .BuyerWelPara {
+=======
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+.Buyer-col1 p {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     font-size: 18px;
     margin-bottom: 27px;
     margin-left: 28px;
     margin-right: 28px;
     font-family: sans-serif;
     color: #e0e0e0;
+<<<<<<< HEAD
     text-align: center;
     padding: 0px 30px 0px 30px;
     animation: fadeIn 2s ease-out;
     /* Fade-in animation */
+=======
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Right column - Form area */
@@ -75,6 +107,7 @@
     align-items: center;
 }
 
+<<<<<<< HEAD
 .Buyer-col2-head {
     color: #004d40;
     /* Darker teal */
@@ -86,18 +119,37 @@
 }
 
 .Buyer-col2-form {
+=======
+.Buyer-col2 h1 {
+    color: #004d40; /* Darker teal */
+    margin-bottom: 32px;
+    font-size: 38px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+.Buyer-col2 form {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+<<<<<<< HEAD
 .Buyer-label {
+=======
+.Buyer-col2 label {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin-top: 10px;
     font-size: 16px;
 }
 
+<<<<<<< HEAD
 .Buyer-col2 input,
 .Buyer-col2 select {
+=======
+.Buyer-col2 input, .Buyer-col2 select {
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     margin-top: 5px;
     padding: 10px;
     width: 80%;
@@ -160,12 +212,16 @@
         opacity: 0;
         transform: translateY(20px);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+<<<<<<< HEAD
 
 /* Container for the buttons */
 .button-row {
@@ -173,10 +229,19 @@
     justify-content: space-between;
     gap: 10px;
     margin-top: 20px;
+=======
+/* Container for the buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Register button styles */
 .Buyer-submit {
+<<<<<<< HEAD
     background-color: #FF9635;
     color: white;
     padding: 10px 20px;
@@ -184,10 +249,20 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+=======
+  background-color: #FF9635;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Clear button styles */
 .Buyer-clear {
+<<<<<<< HEAD
     background-color: white;
     color: #FF9635;
     padding: 10px 20px;
@@ -210,17 +285,45 @@
 .Buyer-submit:hover,
 .Buyer-clear:hover {
     opacity: 0.9;
+=======
+  background-color: white;
+  color: #FF9635;
+  padding: 10px 20px;
+  border: 1px solid #FF9635;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Buyer-clear .clear-icon {
+  margin-right: 5px;
+  font-size: 18px; /* Larger cross icon */
+}
+
+/* Button hover effects */
+.Buyer-submit:hover, .Buyer-clear:hover {
+  opacity: 0.9;
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 }
 
 /* Floating circle animation */
 /* Floating circle animation */
 .floating-circle {
     position: absolute;
+<<<<<<< HEAD
     width: 190px;
     /* Slightly increased size */
     height: 190px;
     background-color: #004d40;
     /* Dark cyan circle */
+=======
+    width: 190px; /* Slightly increased size */
+    height: 190px;
+    background-color: #004d40; /* Dark cyan circle */
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     border-radius: 50%;
     animation: circle-animation 14s ease-in-out infinite;
     z-index: -1;
@@ -232,12 +335,18 @@
         left: 100%;
         transform: translateX(-50%);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     50% {
         bottom: 100%;
         left: 70%;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     100% {
         bottom: 110%;
     }
@@ -249,7 +358,10 @@
         opacity: 0;
         transform: translateY(20px);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     100% {
         opacity: 1;
         transform: translateY(0);

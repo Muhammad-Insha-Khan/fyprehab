@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Swal from 'sweetalert2';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'
@@ -6,6 +7,14 @@ import '../styles/BuyerRegistration.css';
 import BuyerContractABI from "../contracts/BuyerContract.json";
 import getWeb3 from "../utils/web3";
 import logo from "./logo.png";
+=======
+import 'react-phone-input-2/lib/style.css'; // Import styles for react-phone-input-2
+import Swal from 'sweetalert2';
+import PhoneInput from 'react-phone-input-2';
+import '../styles/BuyerRegistration.css';
+import BuyerContractABI from "../contracts/BuyerContract.json";
+import getWeb3 from "../utils/web3";
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
 const BuyerRegistration = () => {
   const [formData, setFormData] = useState({
@@ -107,6 +116,7 @@ const BuyerRegistration = () => {
   };
 
   const handleSubmit = async (e) => {
+<<<<<<< HEAD
     e.preventDefault();
     try {
       const web3 = await getWeb3();
@@ -165,6 +175,66 @@ const BuyerRegistration = () => {
       return;
     }
 
+=======
+   e.preventDefault();
+    try {
+        const web3 = await getWeb3();
+        const accounts = await web3.eth.getAccounts();
+        const networkId = await web3.eth.net.getId();
+        const deployedNetwork = BuyerContractABI.networks[networkId];
+
+        if (!deployedNetwork) {
+            alert("Error: Smart contract not deployed on this network.");
+            return;
+        }
+
+        const contract = new web3.eth.Contract(
+            BuyerContractABI.abi,
+            deployedNetwork.address
+        );
+
+        // Check if email already exists in the blockchain
+        const emailExists = await contract.methods.isEmailRegistered(formData.email).call();
+        if (emailExists) {
+            Swal.fire({
+                title: "Error",
+                text: "This email is already registered. Please use a different email.",
+                icon: "error",
+            });
+            return;
+        }
+
+        // Register the buyer if email is not found
+        await contract.methods
+            .registerBuyer(
+                formData.firstName,
+                formData.lastName,
+                formData.email,
+                formData.phone,
+                formData.fieldDomain
+            )
+            .send({ from: accounts[0], gas: 500000 });
+
+        Swal.fire({
+            title: "Registration Successful",
+            text: "You have been registered on the blockchain!",
+            icon: "success",
+        });
+    } catch (error) {
+        Swal.fire({
+            title: "Registration Failed",
+            text: error.message,
+            icon: "error",
+        });
+    }
+////////////////////////////////////
+    e.preventDefault();
+  
+    if (!validateForm()) {
+      return;
+    }
+  
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     try {
       const response = await fetch("http://localhost:5000/api/buyer/register", {
         method: "POST",
@@ -173,9 +243,15 @@ const BuyerRegistration = () => {
         },
         body: JSON.stringify(formData),
       });
+<<<<<<< HEAD
 
       const data = await response.json();
 
+=======
+  
+      const data = await response.json();
+  
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
       if (response.ok) {
         Swal.fire({
           title: "Registration Successful",
@@ -226,6 +302,7 @@ const BuyerRegistration = () => {
   return (
     <div className="Buyer-container">
       <div className="Buyer-col1">
+<<<<<<< HEAD
         <h1 className='BuyerWelHeading'>Welcome to Creative Connects</h1>
         <p className='BuyerWelPara'>Join a community where you can connect, collaborate, and share your creative skills and interests.</p>
         <button className="Buyerback" onClick={handleBack}>
@@ -240,6 +317,20 @@ const BuyerRegistration = () => {
           <div className="Buyer-input-row">
             <div className="Buyer-input-half">
               <label className="Buyer-label" htmlFor="f-name">First Name</label>
+=======
+        <h1>Welcome to Creative Connects</h1>
+        <p>Join a community where you can connect, collaborate, and share your creative skills and interests.</p>
+        <button className="Buyerback" onClick={handleBack}>
+          Back
+        </button>
+      </div>
+      <div className="Buyer-col2">
+        <h1>Buyer Registration</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="Buyer-input-row">
+            <div className="Buyer-input-half">
+              <label htmlFor="f-name">First Name</label>
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               <input
                 type="text"
                 id="f-name"
@@ -286,11 +377,14 @@ const BuyerRegistration = () => {
                   autoFocus: true,
                 }}
                 enableSearch
+<<<<<<< HEAD
                 containerStyle={{ width: '200px' }}         // Full wrapper
                 inputStyle={{
                   width: '240px',
                   padding: '10px 10px 10px 50px'
                 }}
+=======
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
               />
             </div>
           </div>
@@ -326,6 +420,10 @@ const BuyerRegistration = () => {
             name="fieldDomain"
             value={formData.fieldDomain}
             onChange={handleChange}
+<<<<<<< HEAD
+=======
+            required
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           >
             <option value="">Select a field domain</option>
             {fieldDomains.map((domain, index) => (
@@ -341,6 +439,10 @@ const BuyerRegistration = () => {
             name="interests"
             value={formData.interestToAdd || ''}
             onChange={(e) => setFormData({ ...formData, interestToAdd: e.target.value })}
+<<<<<<< HEAD
+=======
+            required
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           >
             <option value="">Select an interest</option>
             {interests.map((interest, index) => (

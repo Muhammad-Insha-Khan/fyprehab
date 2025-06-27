@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ClickableText.css */
 .Clickabletext {
     display: flex;
@@ -18,3 +19,28 @@
     color: #00796b;
   }
   
+=======
+.Clickabletext {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.Clickabletext.clickable {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.Clickabletext.clickable:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.Icon {
+  font-size: 16px;
+}
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59

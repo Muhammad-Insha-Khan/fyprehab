@@ -9,11 +9,19 @@ const WelcomePage = () => {
   useEffect(() => {
     const welcomeTimer = setTimeout(() => {
       setShowWelcomeText(false); // Hide the welcome text after 5 seconds
+<<<<<<< HEAD
     }, 3000);
 
     const signinTimer = setTimeout(() => {
       setShowSignin(true); // Show signin form after 5 seconds
     }, 3000);
+=======
+    }, 5000);
+
+    const signinTimer = setTimeout(() => {
+      setShowSignin(true); // Show signin form after 5 seconds
+    }, 5000);
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
     return () => {
       clearTimeout(welcomeTimer);

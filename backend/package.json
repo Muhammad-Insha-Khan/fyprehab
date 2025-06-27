@@ -15,11 +15,19 @@
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+<<<<<<< HEAD
+=======
+    "env": "^0.0.2",
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     "express": "^4.21.1",
     "google-translate-api": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.2",
+<<<<<<< HEAD
     "nodemailer": "^6.9.16",
+=======
+    "nodemailer": "^7.0.3",
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     "socket.io": "^4.8.1",
     "web3": "^1.10.4"
   }

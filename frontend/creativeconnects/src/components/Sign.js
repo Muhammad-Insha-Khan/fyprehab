@@ -13,13 +13,24 @@ const Signin = () => {
 
   // Handle Sign In
   const handleSignIn = async (e) => {
+<<<<<<< HEAD
     e.preventDefault();
+=======
+    e.preventDefault(); // Prevent page reload
+
+    // Define the API URL based on user type
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
     const apiUrl =
       userType === 'seller'
         ? 'http://localhost:5000/api/seller/signin'
         : userType === 'buyer'
+<<<<<<< HEAD
           ? 'http://localhost:5000/api/buyer/signin'
           : 'http://localhost:5000/api/skillSwapper/signin'; // SkillSwapper sign-in URL
+=======
+        ? 'http://localhost:5000/api/buyer/signin'
+        : 'http://localhost:5000/api/skillSwapper/signin'; // SkillSwapper sign-in URL
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
 
     try {
       // Send POST request to the back-end for sign-in
@@ -38,7 +49,11 @@ const Signin = () => {
 
         localStorage.setItem('token', data.token); // Store JWT token in localStorage
         localStorage.setItem('user', JSON.stringify(data.user));
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
         Swal.fire({
           title: 'Success!',
           text: 'You are now logged in!',
@@ -57,7 +72,11 @@ const Signin = () => {
       } else {
         Swal.fire({
           title: 'Error!',
+<<<<<<< HEAD
           text: data.message || 'Something went wrongs, please try again.',
+=======
+          text: data.message || 'Something went wrong, please try again.',
+>>>>>>> 00808c20f753da777068b81dc215fec35f82ed59
           icon: 'error',
           confirmButtonText: 'Try Again',
         });
