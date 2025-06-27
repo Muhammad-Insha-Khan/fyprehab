@@ -1,0 +1,119 @@
+body {
+   
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    border: 1px solid #e1e1e1;
+    border-radius: 15px;
+    margin: 70px auto; /* Center horizontally */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1250px; /* Increased max-width slightly */
+    width: 100%; /* Increased the container width to 90% */
+}
+
+.col1 {
+    background-color: #00796b; /* Dark cyan */
+    padding: 30px;
+    width: 42%; /* Slightly increased width */
+    padding-top: 50px; /* Adjusted padding */
+    padding-bottom: 50px; /* Adjusted padding */
+    color: white;
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    flex-direction: column; /* Ensure content aligns vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+.col1 h1 {
+    margin-bottom: 28px;
+    font-size: 38px; /* Slightly increased font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    animation: fadeIn 2s ease-out;
+}
+
+.col1 p {
+    font-size: 18px; /* Slightly increased font size */
+    margin-bottom: 27px;
+    margin-left: 28px;
+    margin-right: 28px;
+    font-family: sans-serif;
+    color: #e0e0e0;
+    animation: fadeIn 2s ease-out;
+}
+
+.col2 {
+    padding: 30px;
+    width: 58%; /* Slightly increased width */
+    padding-top: 50px; /* Adjusted padding */
+    padding-bottom: 50px; /* Adjusted padding */
+    color: #333333;
+    display: flex;
+    flex-direction: column; /* Ensure content aligns vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+.col2 h1 {
+    color: #004d40; /* Darker teal */
+    margin-bottom: 32px;
+    font-size: 38px; /* Slightly increased font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 2s ease-out;
+}
+
+.col2 p {
+    font-size: 15px; /* Slightly increased font size */
+    margin-bottom: -30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: sans-serif;
+    color: #707070;
+    margin-top: 140px;
+    animation: fadeIn 2s ease-out;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+/* Floating Circle Animation */
+.floating-circle {
+    position: absolute;
+    width: 190px; /* Slightly increased size */
+    height: 190px;
+    background-color: #004d40; /* Dark cyan circle */
+    border-radius: 50%;
+    animation: circle-animation 14s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes circle-animation {
+    0% {
+        bottom: 50%;
+        left: 100%;
+        transform: translateX(-50%);
+    }
+    50% {
+        bottom: 100%;
+        left: 70%;
+    }
+    100% {
+        bottom: 110%;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

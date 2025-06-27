@@ -1,0 +1,30 @@
+
+.Divider {
+    height: 1px; /* Thickness of the divider */
+    background-color: #ddd; /* Color of the divider */
+    border: none; /* Remove border if any */
+    margin: 0px 40px; /* Add spacing around the divider */
+    max-width: 1000px;
+}
+  .container {
+    display: flex;
+    align-items: center;
+  }
+.container h2{
+    cursor: pointer;
+}
+  
+  .column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: #000;
+    height: 100%;
+  }
+  .Proposal{
+    max-width: 1000px;
+  }
+  

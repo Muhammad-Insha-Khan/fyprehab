@@ -1,0 +1,63 @@
+.notification {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .clickabletext {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+  }
+  .clickabletext:hover {
+    color: #00796b;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  /* Full Height, Right-Side Dropdown */
+  .notification-dropdown {
+    position: fixed;  /* Use fixed to keep it in place as you scroll */
+    top: 0;  /* Align to the top of the window */
+    right: 0;  /* Align to the right side of the window */
+    width: 50vw;  /* 50% of the viewport width */
+    height: 100vh;  /* Full height of the window */
+    background-color: white;
+    border-left: 1px solid #ccc;  /* Optional: Add a border between the content and dropdown */
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);  /* Shadow to separate from main content */
+    padding: 20px;
+    z-index: 10;
+    overflow-y: auto; /* Make it scrollable if the content overflows */
+  }
+  
+  .notification-dropdown h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .notification-dropdown p {
+    font-size: 22px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .Divider {
+    height: 1px; /* Thickness of the divider */
+    background-color: #ddd; /* Color of the divider */
+    border: none; /* Remove border if any */
+    margin: 0px; /* Add spacing around the divider */
+  }
+
+
+  .button {
+    position: fixed;  /* Position fixed keeps it in place even when scrolling */
+    bottom: 20px;     /* Position 20px from the bottom of the window */
+    right: 20px;      /* Position 20px from the right of the window */
+  }
+  
